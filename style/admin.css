@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;;
+}
+
+.nav-link:hover{
+    background-color: grey;
+}
+
+.display-4{
+    font-weight: bold;
+}
+
+.card-body-icon{
+    position: absolute;
+    z-index: 0;
+    top: 25px;
+    right: 15px;
+    font-size: 90px;
+    opacity: 0.4;
+
+}
