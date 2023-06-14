@@ -2,8 +2,9 @@
 var seats = [];
 
 // Fungsi untuk mengatur status kursi saat diklik
-function toggleSeatStatus(event) {
+function toggleSeatStatus(event, angka) {
   var seat = event.target;
+  document.getElementById('lokasi').value = angka;
   if (seat.classList.contains('selected')) {
     seat.classList.remove('selected');
   } else {
@@ -42,11 +43,27 @@ function displaySeats() {
   var seatsContainer = document.querySelector('.seats-container');
   seatsContainer.innerHTML = '';
 
-  for (var i = 1; i <= 112; i++) {
+  for (let i = 1; i <= 40; i++) {
     var seat = document.createElement('div');
     seat.className = 'seat';
-    seat.setAttribute('data-seat', i);
-    seat.addEventListener('click', toggleSeatStatus);
+    seat.setAttribute('data-seat', i); 
+    seat.innerText = i;
+    seat.style.textAlign = "center";
+    seat.style.lineHeight = "40px"
+    if (larangan.includes(i)) {
+        seat.classList.add('selected');
+    } else {
+      seat.addEventListener('click', (event) => {
+            var seat = event.target;
+            document.getElementById('lokasi').value = i;
+            document.getElementById('lantai').value = lantai;
+            if (seat.classList.contains('selected')) {
+              seat.classList.remove('selected');
+            } else {
+              seat.classList.add('selected');
+            }
+      });
+    }
     seatsContainer.appendChild(seat);
     seats.push(i);
   }

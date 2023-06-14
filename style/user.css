@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
 .col-md-3 h1{
   text-align: center;
   margin-top: 15px;
@@ -22,43 +28,47 @@
 .kotak0{
   width: 100px;
   height: 40px;
-  background-color: #36e3dd;
+  background-color: #4E4949;
   margin-left: 80px;
-  margin-top: 30px;
+  margin-top: 20px;
   border-radius: 10px;
 }
 
 .kotak0 h3{
   font-size: 20px;
   font-weight: bold;
-  padding-top: 6px;
+  padding-top: 7px;
   text-align: center;
+  font-family: 'Risque', cursive;
+  color: aliceblue;
 }
 
 .kotak1{
-  width: 60px;
+  width: 150px;
   height: 40px;
-  background-color: #36e3dd;
-  margin-left: 100px;
-  margin-top: 20px;
+  background-color: #4E4949;
+  margin-left: 60px;
+  margin-top: 10px;
   border-radius: 10px;
 }
 
 .kotak1 h3{
   font-size: 20px;
   font-weight: bold;
-  padding-top: 6px;
+  padding-top: 7px;
   text-align: center;
+  font-family: 'Risque', cursive;
+  color: aliceblue;
 }
 
 
 
 .kotak2{
-  width: 60px;
+  width: 100px;
   height: 40px;
-  background-color: #36e3dd;
-  margin-left: 100px;
-  margin-top: 20px;
+  background-color: #4E4949;
+  margin-left: 85px;
+  margin-top: 10px;
   border-radius: 10px;
 }
 
@@ -66,29 +76,33 @@
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  padding-top: 5px;
-}
+  padding-top: 7px;
+  font-family: 'Risque', cursive;
+  color: aliceblue;
+  }
 
 .kotak0:hover{
-  background-color: aliceblue;
+  background-color: red;
   color: black;
 }
 
 .kotak1:hover{
-  background-color: aliceblue;
-  color: black;
+  background-color: red;
+  color: aliceblue;
 }
 
 .kotak2:hover{
-  background-color: aliceblue;
+  background-color: red;
   color: black;
 }
 
 .keluar a i{
   font-size: 30px;
   margin-left: 230px;
-  margin-top: 200px;
+  margin-top: 50px;
 }
+
+
 
 .screen {
   text-align: center;
@@ -102,6 +116,9 @@
   justify-content: center;
   margin-right: 55px;
   margin-left: 55px;
+  gap: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .seat {

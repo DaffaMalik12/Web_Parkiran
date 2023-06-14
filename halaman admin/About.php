@@ -63,13 +63,16 @@
         <div class="col-md-2 bg-dark mt-2 pr-3 pt-4">
             <ul class="nav flex-column ms-3 mb-5">
             <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="halaman_admin.php"><i class="fa-solid fa-gauge me-2"></i> Dashboard</a><hr class="bg-secondary">
+                <a class="nav-link active text-white" aria-current="page" href="halaman_admin.php"><i class="fa-solid fa-gauge me-1"></i> Dashboard</a><hr class="bg-secondary">
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="Daftar Tabel.php"><i class="fa-solid fa-database me-2"></i> Data Tabel</a><hr class="bg-secondary">
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="About.php"><i class="fa-solid fa-address-card me-2"></i> About</a><hr class="bg-secondary">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="penambahan_user.php"><i class="fa-solid fa-file-contract me-2"></i>User</a><hr class="bg-secondary">
             </li>
             </ul>
         </div>

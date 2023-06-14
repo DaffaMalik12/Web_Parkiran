@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: grey;
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-left: 330px;
+}
+
+.kotak{
+    width: 300px;
+    height: 230px;
+    background-color: aliceblue;
+    border-radius: 10px;
+        
+}
+
+.kotak h1{
+    font-size: 35px;
+    text-align: center;
+    padding-top: 20px;
+}

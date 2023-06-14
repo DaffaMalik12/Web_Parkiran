@@ -35,9 +35,9 @@
     <!-- Koneksi Database -->
     <?php
     include "../koneksi.php";
-    $select = "SELECT * FROM user";
+    $select = "SELECT * FROM data_parkir";
     $hasil = mysqli_query($koneksi, $select);
-    $data = mysqli_fetch_array($hasil);
+    $buff = mysqli_fetch_array($hasil);
     ?>
 
 
@@ -71,6 +71,9 @@
             <li class="nav-item">
                 <a class="nav-link text-white" href="About.php"><i class="fa-solid fa-address-card me-2"></i> About</a><hr class="bg-secondary">
             </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="penambahan_user.php"><i class="fa-solid fa-file-contract me-2"></i>User</a><hr class="bg-secondary">
+            </li>
             </ul>
         </div>
         <div class="col-md-10 p-5 pt-4">
@@ -83,7 +86,7 @@
                 <i class="fa-solid fa-door-open"></i>
                 </div>
                 <h5 class="card-title">Masuk Hari ini</h5>
-                <div class="display-4">1.000</div>
+                <div class="display-4"><?php echo $buff['jumlah']; ?></div>
                 <a href=""><p class="card-text text-white">Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i></p></a>
             </div>
             </div>

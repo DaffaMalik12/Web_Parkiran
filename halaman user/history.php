@@ -58,7 +58,7 @@
                 <h3>Lokasi Parkir</h3>
             </div></a>
 
-            <a href="history.php" style="text-decoration: none; color:black"><div class="kotak2">
+            <a href="" style="text-decoration: none; color:black"><div class="kotak2">
                 <h3>History</h3>
             </div></a>
 
@@ -67,24 +67,8 @@
         </div>
 
         <div class="col-md-9" style="background-color: #E0C5AB;">
-            <br>
-            <div class="seats-container bg-secondary" >
-                <!-- Tempatkan elemen kursi di sini -->
-            </div>
-            <form action="" method="post" >
-                <input type="hidden" id="lokasi" name="lokasi">
-                <input type="hidden" id="lantai" name="lantai">
-            <button id="btn-book" type="submit">Simpan</button>
-            </form>
-        </div>
-    </div>
-    <script>
-        var lantai = 1;
-        var larangan = <?= json_encode($sudah_parkir); ?>;
-        console.log(larangan);
-        
-    </script>
-    <script src="script.js"></script>
+           
+    
     
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
