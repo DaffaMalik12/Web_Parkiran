@@ -35,9 +35,24 @@
     <!-- Koneksi Database -->
     <?php
     include "../koneksi.php";
+    $bulan= ((int)date("m"))-1;
+    $listbulan= ["Januari" ,"Februari", "Maret", "April", "Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+    $hari=(int)date("d");
+    $tanggal="$hari $listbulan[$bulan]";
     $select = "SELECT * FROM data_parkir";
     $hasil = mysqli_query($koneksi, $select);
-    $buff = mysqli_fetch_array($hasil);
+    $datapengunjung=array();
+    while($buff = mysqli_fetch_assoc($hasil)){
+        $datapengunjung[$buff["tanggal"]]= $buff["jumlah"];    
+    }
+    $jumlahminggu=0;
+    for($i=$hari-7;$i<$hari;$i++){
+        $jumlahminggu+=$datapengunjung["$i $listbulan[$bulan]"];
+    }
+    $jumlahbulan=0;
+    for($i=1;$i<=$hari;$i++){
+        $jumlahbulan+=$datapengunjung["$i $listbulan[$bulan]"];
+    }
     ?>
 
 
@@ -86,7 +101,7 @@
                 <i class="fa-solid fa-door-open"></i>
                 </div>
                 <h5 class="card-title">Masuk Hari ini</h5>
-                <div class="display-4"><?php echo $buff['jumlah']; ?></div>
+                <div class="display-4"><?php echo $datapengunjung[$tanggal]; ?></div>
                 <a href=""><p class="card-text text-white">Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i></p></a>
             </div>
             </div>
@@ -97,7 +112,7 @@
                 <i class="fa-solid fa-door-open"></i>
                 </div>
                 <h5 class="card-title">Masuk Minggu ini</h5>
-                <div class="display-4">1.000</div>
+                <div class="display-4"><?php echo $jumlahminggu ?></div>
                 <a href=""><p class="card-text text-white">Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i></p></a>
             </div>
             </div>
@@ -108,7 +123,7 @@
                 <i class="fa-solid fa-door-open"></i>
                 </div>
                 <h5 class="card-title">Masuk Bulan ini</h5>
-                <div class="display-4">1.000</div>
+                <div class="display-4"><?php echo $jumlahbulan ?></div>
                 <a href=""><p class="card-text text-white">Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i></p></a>
             </div>
             </div>
@@ -116,10 +131,9 @@
             <div class="card mt-3">
             <div class="card-header" style="background-color: grey;">
                 <p" style="color: black;">GRAFIK</p>
-            </div>
+            </div>  
             <div class="card-body" style="height: 300px;">
-                
-                
+            <canvas id="chart"></canvas>
             </div>
             </div>
         </div>
@@ -137,10 +151,30 @@
     <!-- Script Js -->
     <script src="admin.js"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+            const ctx = document.getElementById('chart');
+
+    new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+        }]
+    },
+    options: {
+        responsive:true,
+        maintainAspectRatio: false, 
+        scales: {
+        y: {
+            beginAtZero: true
+        }
+        }
+    }
+    });
+    </script>
   </body>
 </html>
