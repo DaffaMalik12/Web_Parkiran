@@ -137,3 +137,17 @@
   margin-left: 60px;
   margin-top: 20px;
 }
+
+.content{
+  margin: 30px;
+  /* width: 100%; */
+  height: 550px;
+  background-color: black;
+}
+
+.card{
+  padding-top: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: coral;
+}
