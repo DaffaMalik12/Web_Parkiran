@@ -78,11 +78,39 @@
         </div>
         <div class="col-md-10 p-5 pt-4">
             <h3><i class="fa-solid fa-database me-2"></i> DAFTAR TABEL</h3><hr>
-
-        
-
-        
-        
+            <br>
+            <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">id</th>
+                <th scope="col">nama_user</th>
+                <th scope="col">lokasi</th>
+                <th scope="col">username</th>
+                <th scope="col">Password</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Hapus</th>
+                </tr>
+            </thead>
+            <?php
+                    while ($buff = mysqli_fetch_array($hasil)) {
+                    ?>
+            <tbody>
+                <tr>
+                <th scope="row"><?php echo $buff['id_user']; ?></th>
+                <td><?php echo $buff['nama_user']; ?></td>
+                <td><?php echo $buff['lokasi']; ?></td>
+                <td><?php echo $buff['username']; ?></td>
+                <td><?php echo $buff['password']; ?></td>
+                <td><a href="edit.php?id_user=<?php echo $buff['id_user']; ?>">edit</a></td>
+                <td><a href="hapus.php?id_user=<?php echo $buff['id_user']; ?>">hapus</a></td>
+                </tr>
+            </tbody>
+            <?php 
+                };
+                mysqli_close($koneksi)
+                ?>
+        </table>
+        </div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -93,10 +121,5 @@
     <!-- Script Js -->
     <script src="admin.js"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
