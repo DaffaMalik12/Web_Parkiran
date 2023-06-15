@@ -9,7 +9,10 @@ $level = $_POST["level"];
 
 
 $mysql = "INSERT INTO user VALUES
-(NULL, '$nama_user', '$username', '$password', '$level')";
+(0, '$nama_user', NULL, '$username', '$password', '$level')";
+
+mysqli_query($koneksi,$mysql);
+
 
 echo"<script>alert('Selamat, User telah terdaftar');window.location.href='halaman admin/penambahan_user.php';</script>";
 

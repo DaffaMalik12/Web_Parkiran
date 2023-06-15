@@ -49,7 +49,10 @@ function displaySeats() {
     seat.setAttribute('data-seat', i); 
     seat.innerText = i;
     seat.style.textAlign = "center";
-    seat.style.lineHeight = "40px"
+    seat.style.lineHeight = "40px";
+    if(parkiruser==i){
+      seat.style.background="blue";
+    }
     if (larangan.includes(i)) {
         seat.classList.add('selected');
     } else {

@@ -24,3 +24,7 @@ body{
     opacity: 0.4;
 
 }
+
+.card-body{
+    position: relative;
+}

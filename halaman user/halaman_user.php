@@ -27,17 +27,22 @@
     <?php
     session_start();
     include "../koneksi.php";
-    $select = "SELECT * FROM user";
-    $hasil = mysqli_query($koneksi, $select);
     $nama = $_SESSION['nama_user'];
     if(isset($_POST['lokasi'])){
         echo $_POST['lantai'];
-        $sql = "UPDATE user SET lokasi=$_POST[lokasi], lantai=$_POST[lantai] WHERE `nama_user`='$nama'";
+        $sql = "UPDATE user SET lokasi=$_POST[lokasi] WHERE `nama_user`='$nama'";
         mysqli_query($koneksi, $sql);
     }
+    $select = "SELECT * FROM user";
+    $hasil = mysqli_query($koneksi, $select);
     $sudah_parkir = array();
     while ($data = mysqli_fetch_assoc($hasil)) {
-        array_push($sudah_parkir, (int)$data['lokasi']);
+        if($data["nama_user"]==$nama){
+            $parkiruser=(int)$data['lokasi'];
+        }
+        else{
+            array_push($sudah_parkir, (int)$data['lokasi']);    
+        }
     }
         
     ?>
@@ -56,10 +61,6 @@
             </div></a>
             <a href="halaman_user.php" style="text-decoration: none; color:black;"><div class="kotak1">
                 <h3>Lokasi Parkir</h3>
-            </div></a>
-
-            <a href="history.php" style="text-decoration: none; color:black"><div class="kotak2">
-                <h3>History</h3>
             </div></a>
 
             <div class="keluar">
@@ -81,7 +82,7 @@
     <script>
         var lantai = 1;
         var larangan = <?= json_encode($sudah_parkir); ?>;
-        console.log(larangan);
+        var parkiruser= <?= json_encode($parkiruser); ?>;
         
     </script>
     <script src="script.js"></script>
