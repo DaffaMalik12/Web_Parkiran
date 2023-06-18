@@ -53,7 +53,6 @@
             </form>
             <div class="icon ms-2">
                 <h5>
-                    <i class="fa-solid fa-envelope me-2" data-toggle="tooltip" title="Pesan Masuk"></i>
                     <a href="../login.php"><i class="fa-solid fa-right-from-bracket" data-toggle="tooltip" title="Keluar" style="color: black;"></i></a>
                 </h5>
             </div>
@@ -73,11 +72,11 @@
                     <hr class="bg-secondary">
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="About.php"><i class="fa-solid fa-address-card me-2"></i> About</a>
+                    <a class="nav-link text-white" href="#"><i class="fa-solid fa-file-contract me-2"></i>User</a>
                     <hr class="bg-secondary">
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#"><i class="fa-solid fa-file-contract me-2"></i>User</a>
+                    <a class="nav-link text-white" href="About.php"><i class="fa-solid fa-address-card me-2"></i> About</a>
                     <hr class="bg-secondary">
                 </li>
             </ul>

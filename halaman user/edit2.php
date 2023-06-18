@@ -6,4 +6,4 @@ if(isset($_POST['id_user'])){
     if($hasil){
         echo"<script>alert('Data berhasil diedit');window.location.href='halaman_user.php';</script>";
     }
-}
+}   

@@ -45,13 +45,12 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><i class="fa-solid fa-user" style="width: 20px;"></i> Welcome <?php echo $data['nama_user']; ?></a>
-        <form class="d-flex ms-auto">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <form  action="" method="get" class="d-flex ms-auto">
+            <input class="form-control me-2" type="text" name="nama_user" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         <div class="icon ms-2">
         <h5>
-        <i class="fa-solid fa-envelope me-2" data-toggle="tooltip" title="Pesan Masuk"></i>
         <a href="../login.php"><i class="fa-solid fa-right-from-bracket" data-toggle="tooltip" title="Keluar" style="color: black;"></i></a>
         </h5>
         </div>
@@ -69,10 +68,10 @@
                 <a class="nav-link text-white" href="Daftar Tabel.php"><i class="fa-solid fa-database me-2"></i> Data Tabel</a><hr class="bg-secondary">
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="About.php"><i class="fa-solid fa-address-card me-2"></i> About</a><hr class="bg-secondary">
+                <a class="nav-link text-white" href="penambahan_user.php"><i class="fa-solid fa-file-contract me-2"></i>User</a><hr class="bg-secondary">
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="penambahan_user.php"><i class="fa-solid fa-file-contract me-2"></i>User</a><hr class="bg-secondary">
+                <a class="nav-link text-white" href="About.php"><i class="fa-solid fa-address-card me-2"></i> About</a><hr class="bg-secondary">
             </li>
             </ul>
         </div>
