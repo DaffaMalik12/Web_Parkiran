@@ -33,3 +33,13 @@ body{
 table{
     text-align: center;
 }
+
+.kard{
+    display: flex;
+    margin-left: 20px;
+}
+
+.cards{
+    margin: 0px  50px 20px;
+    
+}

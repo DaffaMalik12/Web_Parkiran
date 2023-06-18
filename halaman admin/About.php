@@ -51,7 +51,6 @@
         </form>
         <div class="icon ms-2">
         <h5>
-        <i class="fa-solid fa-envelope me-2" data-toggle="tooltip" title="Pesan Masuk"></i>
         <a href="../login.php"><i class="fa-solid fa-right-from-bracket" data-toggle="tooltip" title="Keluar" style="color: black;"></i></a>
         </h5>
         </div>
@@ -69,15 +68,52 @@
                 <a class="nav-link text-white" href="Daftar Tabel.php"><i class="fa-solid fa-database me-2"></i> Data Tabel</a><hr class="bg-secondary">
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="About.php"><i class="fa-solid fa-address-card me-2"></i> About</a><hr class="bg-secondary">
+                <a class="nav-link text-white" href="penambahan_user.php"><i class="fa-solid fa-file-contract me-2"></i>User</a><hr class="bg-secondary">
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="penambahan_user.php"><i class="fa-solid fa-file-contract me-2"></i>User</a><hr class="bg-secondary">
+                <a class="nav-link text-white" href="About.php"><i class="fa-solid fa-address-card me-2"></i> About</a><hr class="bg-secondary">
             </li>
             </ul>
         </div>
         <div class="col-md-10 p-5 pt-4">
             <h3><i class="fa-solid fa-address-card me-2"></i> ABOUT</h3><hr>
+                <div class="kard">
+                <div class="cards" style="width: 18rem;">
+                    <img src="../img/Foto Daffa1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body bg-info">
+                        <h5 class="card-title">Muhammad Daffa Malik</h5>
+                        <p class="card-text">Fullstack  dalam Mengerjakan Project ini </p>
+                        <a href="https://www.instagram.com/muhamad_daffa_malik/" class="btn btn-primary">Detail</a>
+                    </div>
+                </div>
+                <div class="cards" style="width: 18rem;">
+                    <img src="../img/foto aidil1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body bg-info">
+                        <h5 class="card-title">Muhammad Aidil R</h5>
+                        <p class="card-text">Fullstack  dalam Mengerjakan Project ini </p>
+                        <a href="https://www.instagram.com/aidilriansyahh/" class="btn btn-primary">Detail</a>
+                    </div> 
+                </div>   
+                </div>
+                <div class="kard">
+                <div class="cards" style="width: 18rem;">
+                    <img src="../img/foto faried1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body bg-info">
+                        <h5 class="card-title">Muhammad Faried</h5>
+                        <p class="card-text">Pembuat Laporan dalam Mengerjakan Project ini </p>
+                        <a href="https://www.instagram.com/faried10_/" class="btn btn-primary">Detail</a>
+                    </div>
+                </div>
+                <div class="cards" style="width: 18rem;">
+                    <img src="../img/foto hanif1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body bg-info">
+                        <h5 class="card-title">Muhammad Luthfi Hanif</h5>
+                        <p class="card-text">Pembuat Dokumentasi dalam Mengerjakan Project ini </p>
+                        <a href="#" class="btn btn-primary">Detail</a>
+                    </div>
+                </div>   
+                </div>
+        </div>
 
         
 

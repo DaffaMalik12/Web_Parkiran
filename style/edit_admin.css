@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../img/1062.jpg);
+}
+
+.header{
+    width: 280px;
+    background-color: #03fcf4;
+    margin-top: 150px;
+    margin-left: 400px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.header h2{ 
+    padding-top: 20px;
+    text-align: center;
+}
+
+.button{
+    margin-left: 110px;
+    margin-top: 10px;
+}
+
+.nama_user{
+    margin-left: -50px;
+}
+
+.lokasi{
+    margin-left: -50px;
+}
+
+
+.username{
+    margin-left: -50px;
+}
+
+.password{
+    margin-left: -50px;
+}
+
+
+.nama_user-2{
+    padding-left: 10px;
+}
+
+.lokasi-2{
+    padding-left: 10px;
+}
+
+.username-2{
+    padding-left: 10px;
+}
+
+.password-2{
+    padding-left: 10px;
+}

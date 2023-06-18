@@ -28,9 +28,6 @@ function bookSeats() {
   if (selectedSeats.length === 0) {
     alert('Pilih Tempat Parkirmu.');
   }
-  else if (selectedSeats.length > 1) {
-    alert('Anda Memilih Lebih dari Satu Tempat.');
-  }
   else {
     // Kirim data kursi yang dipilih ke server menggunakan AJAX atau formulir
     // Implementasikan sesuai kebutuhan Anda
