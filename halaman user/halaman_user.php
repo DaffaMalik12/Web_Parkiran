@@ -28,11 +28,6 @@
     session_start();
     include "../koneksi.php";
     $nama = $_SESSION['nama_user'];
-    if(isset($_POST['lokasi'])){
-        echo $_POST['lantai'];
-        $sql = "UPDATE user SET lokasi=$_POST[lokasi] WHERE `nama_user`='$nama'";
-        mysqli_query($koneksi, $sql);
-    }
     $select = "SELECT * FROM user";
     $hasil = mysqli_query($koneksi, $select);
     $sudah_parkir = array();
@@ -74,7 +69,8 @@
             <div class="seats-container bg-secondary" >
                 <!-- Tempatkan elemen kursi di sini -->
             </div>
-            <form action="" method="post" >
+            <form action="logicsimpan.php" method="post">
+                <input type="hidden" name="nama" value="<?php echo $_SESSION['nama_user']; ?>">
                 <input type="hidden" id="lokasi" name="lokasi">
                 <input type="hidden" id="lantai" name="lantai">
             <button id="btn-book" type="submit">Simpan</button>
