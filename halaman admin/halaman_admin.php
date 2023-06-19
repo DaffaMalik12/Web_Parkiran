@@ -108,9 +108,6 @@
                         </div>
                         <h5 class="card-title">Masuk Hari ini</h5>
                         <div class="display-4"><?php echo $datapengunjung[$tanggal]; ?></div>
-                        <a href="">
-                            <p class="card-text text-white">Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i></p>
-                        </a>
                     </div>
                 </div>
 
@@ -121,9 +118,6 @@
                         </div>
                         <h5 class="card-title">Masuk Minggu ini</h5>
                         <div class="display-4"><?php echo $jumlahminggu ?></div>
-                        <a href="">
-                            <p class="card-text text-white">Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i></p>
-                        </a>
                     </div>
                 </div>
 
@@ -134,9 +128,6 @@
                         </div>
                         <h5 class="card-title">Masuk Bulan ini</h5>
                         <div class="display-4"><?php echo $jumlahbulan ?></div>
-                        <a href="">
-                            <p class="card-text text-white">Lihat Detail <i class="fa-solid fa-arrow-right ms-1"></i></p>
-                        </a>
                     </div>
                 </div>
 
